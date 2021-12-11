@@ -25,19 +25,25 @@ preprocess {
     //   }
     // }
 
-    // charpad {
-    //   input = file("playfield.ctm")
-    //   useBuildDir = true
-    //   outputs {
-    //     meta {
-    //       dialect = "KickAssembler"
-    //       output = file("playfield-meta.asm")
-    //     }
-    //     charset {
-    //       output = file("playfield-charset.bin")
-    //     }
-    //   }
-    // }
+    charpad {
+      input = file("bomba.ctm")
+      useBuildDir = true
+      outputs {
+        meta {
+          dialect = "KickAssembler"
+          output = file("bomba-meta.asm")
+        }
+        charset {
+          output = file("bomba-charset.bin")
+        }
+        charsetColours {
+          output = file("bomba-colours.bin")
+        }
+        charsetScreenColours {
+          output = file("bomba-screen-colours.bin")
+        }
+      }
+    }
 
     // spritepad {
     //   input = file("sprites.spd")
